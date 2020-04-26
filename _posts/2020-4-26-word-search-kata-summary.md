@@ -275,6 +275,7 @@ In here I've got a type `GetDirections`, which defines a signature of a function
 ```fsharp
 type GetDirections = Submission -> Directions option
 ```
+
 ```fsharp
 let getDirections : GetDirections = (...)
 ```
