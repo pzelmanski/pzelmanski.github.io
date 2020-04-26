@@ -226,7 +226,7 @@ After I made this test pass, I added some more tests for happy path (find diagon
 
 And as a last thing, a test coverage of the whole solution. I'm pretty satisfied with this coverage (it's really high, but it's because this is a simple and small project), and also this tests saved me some work, by just failing after doing some changes, so i could fix them immiediately.
 
-![test coverage22](/images/test_coverage.png)
+![test coverage](/images/1-word-search-kata-summary/test_coverage.png)
 
 
 ## Surprises of F#
@@ -236,7 +236,7 @@ I'm working as a C# developer. In this chapter I'll try to describe things which
 ### Unable to reference code that is above
 This one is pretty obvious, but it surprised me a lot. In C#, folders and files are sorted alphabetically
 
-![Solution explorer view]({{ site.baseurl }}/images/1-word-search-kata-summary/solution_explorer.png)
+![Solution explorer view](/images/1-word-search-kata-summary/solution_explorer.png)
 
 In F#, folders and files are sorted in the way you organize them. You can move them up and down as you wish, and they will stay where you dropped them. It was kinda strange at first, but after a while it totally made sense, since in F# it's impossible to reference anything from above. 
 
@@ -252,7 +252,7 @@ It wasn't much of a purprise, but I'm still struggling with this one. I still te
 
 Really hard understand, really helpful as soon as I figured it out. There are written type names above every function (this little gray letters), it's a concept called 'type inference'.
 
-![]({{ site.baseurl }}images/1-word-search-kata-summary/type_inference1.png)
+![](/images/1-word-search-kata-summary/type_inference1.png)
 
 At first it seemed like a black magic to me. Only after some time it started to make sense. The compiler can be privided with a signature it should apply for a given function (like in first screenshot), or can determine types by itself (return value in second screenshot). It can be thought of as a function signature.The first part represents parameters, and the last type is a type returned by function. In the above example, we can see that a function named `getSingle` takes a tuple as a parameter [`*` symbol represents that it's a tuple]. The tuple is made of given types:
 * Grid
@@ -260,7 +260,7 @@ At first it seemed like a black magic to me. Only after some time it started to 
 * a function taking `Coordinate` as a parameter and returning `Coordinate`
 and returns a variable of type `string`.
 
-![]({{ site.baseurl }}images/1-word-search-kata-summary/type_inference2.png)
+![](/images/1-word-search-kata-summary/type_inference2.png)
 
 This above function is a bit simpler, it takes a parameter of a type `FirstLetterSubmission` and returns a list of `Coordinate` type. As you can see, there is no implicitly defined type returned by this function, but compiler managed to figure it out by itself.
 
