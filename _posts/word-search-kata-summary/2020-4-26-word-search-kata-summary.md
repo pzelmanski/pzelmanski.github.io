@@ -227,6 +227,7 @@ After I made this test pass, I added some more tests for happy path (find diagon
 And as a last thing, a test coverage of the whole solution. I'm pretty satisfied with this coverage (it's really high, but it's because this is a simple and small project), and also this tests saved me some work, by just failing after doing some changes, so i could fix them immiediately.
 
 ![](images/test_coverage.png)
+<img src="{{ site.baseurl }}/_posts.word-search-kata-summary/images.test_coverage.png">
 
 ## Surprises of F#
 
