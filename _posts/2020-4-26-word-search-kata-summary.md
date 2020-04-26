@@ -226,7 +226,7 @@ After I made this test pass, I added some more tests for happy path (find diagon
 
 And as a last thing, a test coverage of the whole solution. I'm pretty satisfied with this coverage (it's really high, but it's because this is a simple and small project), and also this tests saved me some work, by just failing after doing some changes, so i could fix them immiediately.
 
-![test coverage]({{ site.baseurl }}images/test_coverage.png)
+![test coverage]({{ site.baseurl }}/images/test_coverage.png)
 
 
 ## Surprises of F#
@@ -236,7 +236,7 @@ I'm working as a C# developer. In this chapter I'll try to describe things which
 ### Unable to reference code that is above
 This one is pretty obvious, but it surprised me a lot. In C#, folders and files are sorted alphabetically
 
-![Solution explorer view]({{ site.baseurl }}images/1-word-search-kata-summary/solution_explorer.png)
+![Solution explorer view]({{ site.baseurl }}/images/1-word-search-kata-summary/solution_explorer.png)
 
 In F#, folders and files are sorted in the way you organize them. You can move them up and down as you wish, and they will stay where you dropped them. It was kinda strange at first, but after a while it totally made sense, since in F# it's impossible to reference anything from above. 
 
