@@ -11,7 +11,17 @@ At the beginning I'd like to thank Bizmonger (Scott Nimrod) for helping me with 
 
 ---
 
-## About kata
+# Table of Contents
+1. [About kata](##About-kata)
+2. [Example test cases provided by kata](#Example-test-cases-provided-by-kata)
+3. [Overview of my solution](#Overview-of-my-solution)
+4. [DDD](#DDD)
+5. [TDD](#TDD)
+6. [Surprises of F#](#Surprises-of-F#)
+
+---
+
+# About kata
 
 The kata I was doing is called `Word search` and you can find it on [exercim](https://exercism.io/)
 
@@ -40,7 +50,7 @@ Words can be hidden in all kinds of directions: left-to-right, right-to-left, ve
 Given a puzzle and a list of words return the location of the first and last letter of each word.
 ```
 
-## Example test cases provided by kata
+# Example test cases provided by kata
 
 Just to help you understand a problem a bit more.
 
@@ -88,7 +98,7 @@ let ``Should fail to locate a word that is not in the puzzle`` () =
 
 In my solution, I went off-the-track a little bit. At some point I decided to stop trying to fit into this tests and the domain created by this kata, and I started to treat this requirements as a loose direction in which I should go. The dirrerences between final solution and kata requirements is a slightly different contract (I'm capable of searching only a single word), and instead of returning a position of a given word, I'm just returning a true / false whether the word has been found or not. All differences are I'd say not-that-hard to change so that all the kata requirements would be fulfilled, but I haven't decided to try to do this as for now.
 
-### General overview of my solution
+# Overview of my solution
 
 The solution consists of three projects:
 * Interpreter
@@ -98,18 +108,18 @@ The solution consists of three projects:
 * Tests
     * A project for tests
 
-#### Types
+### Types
 
 I've created some simple and complex types to help myself with implementation (more on this in DDD paragraph). Some of them are:
-* Word (string) - a word I'm looking for
-* SingleLine (string) - a single line within grid (may be horizontal / vertical / diagonal line, converted into a string type)
-* Grid (SingleLine list) - a list of single lines (horizontal lines in this case)
-* Index (int) - an index (horizontal or vertical) within grid
-* Coordinate (Index; Index) - a coordinate within grid
-* FirstLetter (char) - a first letter of a word I'm looking for. Used as a part of my algorithm.
-* Coordinates (Coordinate list) - a set of coordinates, used to keep position of letters found at the grid. If within grid there is more than one FirstLetter, I get more than one Coordinate 
+* `Word (string)` - a word I'm looking for
+* `SingleLine (string)` - a single line within grid (may be horizontal / vertical / diagonal line, converted into a string type)
+* `Grid (SingleLine list)` - a list of single lines (horizontal lines in this case)
+* `Index (int)` - an index (horizontal or vertical) within grid
+* `Coordinate (Index; Index)` - a coordinate within grid
+* `FirstLetter (char)` - a first letter of a word I'm looking for. Used as a part of my algorithm.
+* `Coordinates (Coordinate list)` - a set of coordinates, used to keep position of letters found at the grid. If within grid there is more than one FirstLetter, I get more than one Coordinate 
 
-#### Algorithm
+### Algorithm
 
 The whole idea of this solution was pretty simple: 
 * Get a Word's FirstLetter
@@ -123,7 +133,7 @@ My modules:
 * `LineGetter` and `Coordinates`: modules shared between `Straight` and `Diagonal`, with functions used to find first letter of Word and transforming this `Coordinate` into list of `SingleLine` in every direction
 * `Converters`: helper module, doing convertions between my types
 
-## Revelations on DDD (Domain Driven Design)
+# DDD
 
 ### Wrapping simple types into domain types
 
@@ -178,7 +188,7 @@ type StraightDirections =
 
 What it means is that I've got a type called `Directions`, which contains either `DiagonalDirections list` or `StraightDirections list`. I'm using `Directions` as a type returned by a `GetLine` function, which can be used in two contexts - straight and diagonal. This way I can return a type, which has different meaning in a different context.
 
-## TDD
+# TDD
 
 ### Using TDD to incrementally build the application
 
@@ -229,7 +239,7 @@ And as a last thing, a test coverage of the whole solution. I'm pretty satisfied
 ![test coverage](/images/1-word-search-kata-summary/test_coverage.png)
 
 
-## Surprises of F#
+# Surprises of F#
 
 I'm working as a C# developer. In this chapter I'll try to describe things which was unexpected for me, or not-that-easy to adapt by my brain.
 
