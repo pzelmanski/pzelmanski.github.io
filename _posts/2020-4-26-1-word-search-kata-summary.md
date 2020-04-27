@@ -11,16 +11,6 @@ At the beginning I'd like to thank Bizmonger (Scott Nimrod) for helping me with 
 
 ---
 
-# Table of Contents
-1. [About kata](##About-kata)
-2. [Example test cases provided by kata](#Example-test-cases-provided-by-kata)
-3. [Overview of my solution](#Overview-of-my-solution)
-4. [DDD](#DDD)
-5. [TDD](#TDD)
-6. [Surprises of F#](#Surprises-of-F#)
-
----
-
 # About kata
 
 The kata I was doing is called `Word search` and you can find it on [exercim](https://exercism.io/)
