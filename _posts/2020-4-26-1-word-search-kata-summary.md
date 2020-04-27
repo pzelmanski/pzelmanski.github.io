@@ -341,14 +341,3 @@ submission
 ```
 
 In the above example, the `Diagonal` part is totally optional and can be omitted.
-
-
-```fshapr
-NE = LineGetter.getSingle(grid, {HorizontalIndex = maxPosition; VerticalIndex = maxPosition}, initialPosition, northEast);
-```
-
-In an above example, name of a module feels redundant - I got rid of `LineGetter`, and left `getSingle` only, to improve readability.
-
-```fshapr
-NE = getSingle(grid, {HorizontalIndex = maxPosition; VerticalIndex = maxPosition}, initialPosition, northEast);
-```
