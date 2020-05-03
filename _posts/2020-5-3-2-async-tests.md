@@ -4,7 +4,7 @@ title: F# | Async test result Inconclusive - Test not run
 categories: "FSharp F#"
 ---
 
-I was trying to write an async test for an async result type, but every time i ran tests I got this horrible message telling me nothing about what's wrong.
+I was trying to write an async test for an async result type, but every time I ran tests I got this horrible message telling me nothing about what's wrong.
 
 First, here's a result message after just running a test:
 ```
