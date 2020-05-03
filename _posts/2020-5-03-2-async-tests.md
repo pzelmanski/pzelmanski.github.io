@@ -1,6 +1,6 @@
 ---
 layout: post
-title: F# | Async test result Inconclusive: Test not run
+title: F# | Async test result Inconclusive\: Test not run
 categories: "FSharp F#"
 ---
 
