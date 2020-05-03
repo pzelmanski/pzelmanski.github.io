@@ -1,7 +1,7 @@
 ---
 layout: post
 title: F# | Word Search Kata Summary
-categories: "FSharp kata"
+categories: "FSharp F# kata"
 ---
 
 Recently I decided to start learning F#. In this blog post I will try to desribe my journey with a first bigger kata made by me. It was supposed to be a small and simple kata, but I ended up with a much bigger and more complex code than I was expecting. The whole exercise took me about 20 hours, distibuted over about two weeks.
