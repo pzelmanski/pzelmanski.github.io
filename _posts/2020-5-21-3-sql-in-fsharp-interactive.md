@@ -4,9 +4,10 @@ title: F# | Running Sql commands from F# interactive using paket
 categories: "FSharp F# jetbrains rider interactive fsx"
 ---
 
+Running Sql commands directly from F# interactive within rider is a bit problematic. I've spent a few hours trying to do this, and I feel like it's way more complicated than it could be.
+
 # How to use SqlClient in F# interactive using packet and rider on .NET Core 3.1
 
-Running Sql commands directly from F# interactive within rider is a bit problematic. 
 Prerequisities:
 1. Locally installed SQL Server.
     * Doesn't need to be installed locally, but you need any SQL Server instance
