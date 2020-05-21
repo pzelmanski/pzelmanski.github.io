@@ -49,9 +49,8 @@ Yeah, so I haven't managet to get it running with even .NET standard 2.0. If you
 ![test coverage](/images/3-sql-fsharp-interactive/fsharp-interactive-net-version.png)
 Also, it's recommended to add this directories to .gitignore:
 ```
-# .gitignore:
-# /packet-files/
-# /.packet/
+/packet-files/
+/.packet/
 ```
 Add script to your project, named however you like (I named DbTest.fsx)
 And finally, fill your `.fsx` script with F# code:
