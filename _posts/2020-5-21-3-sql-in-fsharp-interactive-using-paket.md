@@ -13,6 +13,7 @@ Prerequisities:
     * Doesn't need to be installed locally, but you need any SQL Server instance
 2. Some data in sql server
     * Not totally required, but I used this to test whether running sql query works or not. I created some dummy table with dummy data with this script:
+
 ```sql
 create table test1(
 		id int primary key,
